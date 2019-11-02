@@ -37,7 +37,7 @@ const splitByConfig = {
     'sep',
     'oct',
     'nov',
-    'dev'
+    'dec'
   ],
   cateogry: ['birthday', 'wedding', 'holiday', 'misc'],
   undefined: []
