@@ -39,7 +39,18 @@ const splitByConfig = {
     'nov',
     'dec'
   ],
-  cateogry: ['birthday', 'wedding', 'holiday', 'misc'],
+  cateogry: ['birthday', 'wedding', 'holiday', 'home'],
+  budget: [
+    'music',
+    'phone',
+    'health',
+    'shopping',
+    'security',
+    'gaming',
+    'internet',
+    'home',
+    'misc'
+  ],
   undefined: []
 };
 
