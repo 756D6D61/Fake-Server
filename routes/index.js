@@ -5,7 +5,6 @@ var router = express.Router();
 
 const getValue = (prevValue, boundaries) => {
   if (!prevValue) {
-    // Get first value with random number between the two boundaries
     return random.range(boundaries[0], boundaries[1]);
   } else {
     const increment =
@@ -57,7 +56,6 @@ const splitByConfig = {
 routes.map(route => {
   return router.get(`/${route.name}`, function(req, res, next) {
     let data = {};
-    // Get query params from URL
     const splitBy = req.query['split-by'];
     const start = req.query['start'];
     const end = req.query['end'];
@@ -71,7 +69,6 @@ routes.map(route => {
       const startTimestamp = Number(format(new Date(start), 'T'));
       const endTimestamp = Number(format(new Date(end), 'T'));
 
-      // Increment 900000 milliseconds (15 minutes) from the startTimestamp until the endTimestamp
       for (let i = startTimestamp; i <= endTimestamp; i = i + 900000) {
         allTimestamps.push(i);
       }
