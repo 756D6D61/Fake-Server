@@ -24,20 +24,6 @@ const routes = [
 ];
 
 const splitByConfig = {
-  month: [
-    'jan',
-    'feb',
-    'march',
-    'apr',
-    'may',
-    'jun',
-    'jul',
-    'aug',
-    'sep',
-    'oct',
-    'nov',
-    'dec'
-  ],
   cateogry: ['birthday', 'wedding', 'holiday', 'home'],
   budget: [
     'music',
@@ -65,7 +51,7 @@ routes.map(route => {
     let allTimestamps = [];
 
     if (start && end) {
-      // Convert UNIX style date (2019-10-24T13:40:00Z) to timestamp, and then convert to a number so that we can add to it later
+      // Convert UNIX style date (2019-10-24T13:40:00Z) to timestamp and then convert to a number
       const startTimestamp = Number(format(new Date(start), 'T'));
       const endTimestamp = Number(format(new Date(end), 'T'));
 
