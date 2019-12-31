@@ -54,8 +54,7 @@ routes.map(route => {
       // Convert UNIX style date (2019-10-24T13:40:00Z) to timestamp and then convert to a number
       const startTimestamp = Number(format(new Date(start), 'T'));
       const endTimestamp = Number(format(new Date(end), 'T'));
-
-      for (let i = startTimestamp; i <= endTimestamp; i = i + 900000) {
+      for (let i = startTimestamp; i <= endTimestamp; i = i + 3600000) {
         allTimestamps.push(i);
       }
     }
