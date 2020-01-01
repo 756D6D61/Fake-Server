@@ -19,7 +19,7 @@ const getValue = (prevValue, boundaries) => {
 const routes = [
   {
     name: 'savings',
-    boundaries: [0, 10000]
+    boundaries: [0, 1000]
   }
 ];
 
@@ -51,7 +51,7 @@ routes.map(route => {
     // Convert UNIX style date (2019-10-24T13:40:00Z) to timestamp and then convert to a number
     const startTimestamp = Number(format(new Date(), 'T'));
     const endTimestamp = Number(format(new Date(), 'T'));
-    for (let i = startTimestamp; i <= endTimestamp; i = i + 3600000) {
+    for (let i = startTimestamp; i <= endTimestamp; i = i + 9000) {
       allTimestamps.push(i);
     }
 
