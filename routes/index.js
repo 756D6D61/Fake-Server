@@ -19,7 +19,7 @@ const getValue = (prevValue, boundaries) => {
 const routes = [
   {
     name: 'savings',
-    boundaries: [0, 10000]
+    boundaries: [0, 1000]
   }
 ];
 
@@ -43,20 +43,16 @@ routes.map(route => {
   return router.get(`/${route.name}`, function(req, res, next) {
     let data = {};
     const splitBy = req.query['split-by'];
-    const start = req.query['start'];
-    const end = req.query['end'];
 
     const splitBys = splitByConfig[splitBy] || [];
 
     let allTimestamps = [];
 
-    if (start && end) {
-      // Convert UNIX style date (2019-10-24T13:40:00Z) to timestamp and then convert to a number
-      const startTimestamp = Number(format(new Date(start), 'T'));
-      const endTimestamp = Number(format(new Date(end), 'T'));
-      for (let i = startTimestamp; i <= endTimestamp; i = i + 3600000) {
-        allTimestamps.push(i);
-      }
+    // Convert UNIX style date (2019-10-24T13:40:00Z) to timestamp and then convert to a number
+    const startTimestamp = Number(format(new Date(), 'T'));
+    const endTimestamp = Number(format(new Date(), 'T'));
+    for (let i = startTimestamp; i <= endTimestamp; i = i + 9000) {
+      allTimestamps.push(i);
     }
 
     splitBys.forEach(split => {

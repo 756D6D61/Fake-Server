@@ -1,0 +1,10 @@
+{
+  "lambda": {
+    "role": "fake-server-executor",
+    "name": "fake-server",
+    "region": "eu-central-1"
+  },
+  "api": {
+    "id": "bejicmji8c"
+  }
+}
