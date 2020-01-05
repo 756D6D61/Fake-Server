@@ -1,6 +1,6 @@
 # 📊Fake Server
 
-This API is the back-end for the Savings Dashboard project and utilises Node.js and Express
+This server is the back-end for the Savings Dashboard project and utilises Node.js and Express
 
 ### 📋Aims of App
 
