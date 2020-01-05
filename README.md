@@ -19,8 +19,7 @@ This server is the back-end for the Savings Dashboard project and utilises Node.
 - Open up a terminal and run :`npm install`
 - To run this API locally: `npm run start`
 - To view the server end-points deployed on AWS:
-
-https://bejicmji8c.execute-api.eu-central-1.amazonaws.com/latest/savings?split-by=budget
+  https://bejicmji8c.execute-api.eu-central-1.amazonaws.com/latest/savings?split-by=budget
 
 https://bejicmji8c.execute-api.eu-central-1.amazonaws.com/latest/savings?split-by=cateogry
 
